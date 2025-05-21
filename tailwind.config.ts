@@ -65,7 +65,7 @@ export default {
 				},
 				// Custom colors for Oliva Gold
 				olive: {
-					light: '#7D8F3A',
+					light: '#8A9A3B',
 					DEFAULT: '#5D6E1E',
 					dark: '#4A591A'
 				},
