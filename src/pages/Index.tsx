@@ -18,7 +18,7 @@ const Index = () => {
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute("content", 
-        "Импорт Extra Virgin и Pomace напрямую из Андалусии. Масло на складе в Подмосковье, поставки под заказ от 10 т. Таможня и логистика "под ключ".");
+        'Импорт Extra Virgin и Pomace напрямую из Андалусии. Масло на складе в Подмосковье, поставки под заказ от 10 т. Таможня и логистика "под ключ".');
     }
     
     // Initialize animation observer
