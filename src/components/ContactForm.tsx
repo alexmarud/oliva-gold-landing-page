@@ -21,28 +21,53 @@ const ContactForm = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Using FormSubmit.co as a simple email sending service
+      const response = await fetch("https://formsubmit.co/importamare@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          _subject: `Заявка с сайта Олива Голд от ${formData.company}`,
+          _template: "table",
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Заявка отправлена!",
+          description: "Мы свяжемся с вами в ближайшее время.",
+          duration: 5000,
+        });
+        
+        setFormData({
+          name: "",
+          company: "",
+          phone: "",
+          email: "",
+          message: ""
+        });
+      } else {
+        throw new Error("Ошибка отправки формы");
+      }
+    } catch (error) {
+      console.error("Ошибка отправки формы:", error);
       toast({
-        title: "Заявка отправлена!",
-        description: "Мы свяжемся с вами в ближайшее время.",
+        title: "Ошибка отправки",
+        description: "Пожалуйста, попробуйте снова или свяжитесь с нами по телефону.",
+        variant: "destructive",
         duration: 5000,
       });
-      
-      setFormData({
-        name: "",
-        company: "",
-        phone: "",
-        email: "",
-        message: ""
-      });
-      
+    } finally {
       setLoading(false);
-    }, 1500);
+    }
   };
 
   return (

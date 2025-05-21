@@ -36,7 +36,7 @@ const ProductsSection = () => {
   const products = [
     {
       name: "Extra Virgin",
-      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+      image: "/lovable-uploads/3979f86a-0126-47c2-845f-b3e688eb58bb.png",
       description: "Первоклассное купажирование, кислотность ≤ 0,8%",
       features: [
         "Мягкий, фруктовый вкус с нотами свежескошенной травы",
@@ -47,7 +47,7 @@ const ProductsSection = () => {
     },
     {
       name: "Pomace",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+      image: "/lovable-uploads/3979f86a-0126-47c2-845f-b3e688eb58bb.png",
       description: "Оптимально для жарки и фритюра, высокое дымление",
       features: [
         "Нейтральный вкус, идеально для термической обработки",
@@ -67,12 +67,13 @@ const ProductsSection = () => {
           {products.map((product, index) => (
             <div key={index} className="animate-on-scroll">
               <div className="bg-white rounded-lg overflow-hidden shadow-lg">
-                <div 
-                  className="h-64 bg-cover bg-center" 
-                  style={{
-                    backgroundImage: `url(${product.image})`
-                  }}
-                ></div>
+                <div className="p-4 flex justify-center bg-gray-50">
+                  <img 
+                    src={product.image} 
+                    alt={`Оливковое масло ${product.name} в куба-тейнере 1000л`}
+                    className="h-64 object-contain"
+                  />
+                </div>
                 
                 <div className="p-6">
                   <h3 className="text-2xl font-bold text-olive mb-2">
