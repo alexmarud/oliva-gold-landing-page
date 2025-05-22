@@ -14,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 84 65% 27%;
+    --primary: 110 40% 20%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -23,7 +23,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 49 90% 50%;
+    --accent: 45 90% 55%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -96,7 +96,7 @@
   }
 
   .section-heading {
-    @apply text-3xl md:text-4xl font-bold mb-6 text-olive;
+    @apply text-3xl md:text-4xl font-bold mb-6 text-olive-dark;
   }
 
   .section-subheading {
@@ -104,7 +104,7 @@
   }
 
   .cta-button {
-    @apply bg-sunny hover:bg-sunny-dark text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300;
+    @apply bg-gold hover:bg-gold-dark text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300;
   }
 
   .cta-button-outline {

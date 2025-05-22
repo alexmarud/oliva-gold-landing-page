@@ -35,22 +35,22 @@ const AdvantagesSection = () => {
 
   const advantages = [
     {
-      icon: <Map className="h-10 w-10 text-olive" />,
+      icon: <Map className="h-10 w-10 text-gold" />,
       title: "Испания (Андалусия)",
       description: "Регион №1 по качеству оливкового масла в мире"
     },
     {
-      icon: <Calendar className="h-10 w-10 text-olive" />,
+      icon: <Calendar className="h-10 w-10 text-gold" />,
       title: "Импортёр с 2004 г.",
       description: "Собственная таможенная и логистическая экспертиза"
     },
     {
-      icon: <Truck className="h-10 w-10 text-olive" />,
+      icon: <Truck className="h-10 w-10 text-gold" />,
       title: "Масло уже на складе в МО",
       description: "Быстрые отгрузки по всей России"
     },
     {
-      icon: <FileCheck className="h-10 w-10 text-olive" />,
+      icon: <FileCheck className="h-10 w-10 text-gold" />,
       title: "Партия под заказ",
       description: "От 10 т, 30–40 дней «под ключ»"
     }
@@ -65,12 +65,12 @@ const AdvantagesSection = () => {
           {advantages.map((advantage, index) => (
             <div 
               key={index} 
-              className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center animate-on-scroll"
+              className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center animate-on-scroll hover:shadow-lg transition-shadow"
             >
               <div className="mb-4">
                 {advantage.icon}
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">
+              <h3 className="text-xl font-bold text-olive-dark mb-2">
                 {advantage.title}
               </h3>
               <p className="text-gray-600">
@@ -85,7 +85,7 @@ const AdvantagesSection = () => {
             Прямой импорт из Андалусии с 2004 г.
           </p>
           <button 
-            className="cta-button"
+            className="bg-gold hover:bg-gold-dark text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Запросить прайс

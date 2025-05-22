@@ -35,7 +35,7 @@ const NavBar = () => {
       <div className="container mx-auto flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2">
           <img 
-            src="/lovable-uploads/3979f86a-0126-47c2-845f-b3e688eb58bb.png" 
+            src="/lovable-uploads/93cb3a15-7f26-44af-b975-ecc3ec3b81c7.png" 
             alt="Олива Голд" 
             className="h-14 w-auto" 
           />
@@ -50,7 +50,7 @@ const NavBar = () => {
           <NavLink href="#contact" scrolled={scrolled}>Контакты</NavLink>
           <Button 
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-sunny hover:bg-sunny-dark text-white"
+            className="bg-gold hover:bg-gold-dark text-white"
           >
             Получить прайс
           </Button>
@@ -65,7 +65,7 @@ const NavBar = () => {
         >
           <Menu className={cn(
             "h-6 w-6 transition-colors duration-300",
-            scrolled ? "text-olive" : "text-white"
+            scrolled ? "text-olive-dark" : "text-white"
           )} />
         </Button>
       </div>
@@ -94,7 +94,7 @@ const NavBar = () => {
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                 setMobileMenuOpen(false);
               }}
-              className="bg-sunny hover:bg-sunny-dark text-white mt-4 w-full"
+              className="bg-gold hover:bg-gold-dark text-white mt-4 w-full"
             >
               Получить прайс
             </Button>
@@ -118,7 +118,7 @@ const NavLink = ({
     <a 
       href={href} 
       className={cn(
-        "font-medium text-sm transition-colors duration-300 hover:text-olive-light",
+        "font-medium text-sm transition-colors duration-300 hover:text-gold",
         scrolled ? "text-gray-700" : "text-white"
       )}
     >
@@ -139,7 +139,7 @@ const MobileNavLink = ({
   return (
     <a 
       href={href} 
-      className="font-medium text-gray-700 py-2 border-b border-gray-100 hover:text-olive"
+      className="font-medium text-gray-700 py-2 border-b border-gray-100 hover:text-gold"
       onClick={onClick}
     >
       {children}

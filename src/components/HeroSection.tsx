@@ -11,7 +11,7 @@ const HeroSection = () => {
       id="top"
       className="relative min-h-screen flex items-center justify-center bg-gradient-to-r from-olive/90 to-olive px-4"
       style={{
-        backgroundImage: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')",
+        backgroundImage: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed"
@@ -22,9 +22,17 @@ const HeroSection = () => {
       ></div>
 
       <div className="container mx-auto relative z-10 text-center">
+        <div className="flex justify-center mb-8">
+          <img 
+            src="/lovable-uploads/93cb3a15-7f26-44af-b975-ecc3ec3b81c7.png" 
+            alt="Олива Голд" 
+            className="h-40 md:h-48 w-auto drop-shadow-2xl animate-fade-in" 
+          />
+        </div>
+        
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Олива Голд — оптовый импорт оливкового масла в куба-тейнерах 1000 л
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gold mb-6 drop-shadow-lg">
+            Оптовый импорт оливкового масла в куба-тейнерах 1000 л
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8">
@@ -34,7 +42,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               onClick={scrollToContact}
-              className="cta-button text-lg"
+              className="bg-gold hover:bg-gold-dark text-white text-lg"
               size="lg"
             >
               Получить оптовый прайс

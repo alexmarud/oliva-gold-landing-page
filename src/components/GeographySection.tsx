@@ -45,45 +45,45 @@ const GeographySection = () => {
             <div 
               className="rounded-lg overflow-hidden shadow-lg h-96 bg-cover bg-center"
               style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1569445748557-316b8c8af9f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')"
+                backgroundImage: "url('https://images.unsplash.com/photo-1575503802870-45de6a6217c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')"
               }}
             ></div>
           </div>
           
           <div className="animate-on-scroll">
-            <h3 className="text-2xl font-bold text-olive mb-4">
+            <h3 className="text-2xl font-bold text-olive-dark mb-4">
               Постоянный запас на складе в Подмосковье
             </h3>
             
             <ul className="space-y-4 mb-8">
               <li className="flex items-start">
-                <span className="text-sunny mr-2 text-2xl">•</span>
+                <span className="text-gold mr-2 text-2xl">•</span>
                 <span className="text-gray-700">
                   <strong>Extra Virgin & Pomace</strong> куба-тейнеры 1000 л
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="text-sunny mr-2 text-2xl">•</span>
+                <span className="text-gold mr-2 text-2xl">•</span>
                 <span className="text-gray-700">
                   Склад класса А с температурным контролем
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="text-sunny mr-2 text-2xl">•</span>
+                <span className="text-gold mr-2 text-2xl">•</span>
                 <span className="text-gray-700">
                   Отгрузки в течение 1-3 рабочих дней
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="text-sunny mr-2 text-2xl">•</span>
+                <span className="text-gold mr-2 text-2xl">•</span>
                 <span className="text-gray-700">
                   Доставка по всей территории России
                 </span>
               </li>
             </ul>
             
-            <div className="bg-sunny/10 rounded-lg p-6 mb-8">
-              <h4 className="text-xl font-medium text-olive mb-2">
+            <div className="bg-gold/10 rounded-lg p-6 mb-8">
+              <h4 className="text-xl font-medium text-olive-dark mb-2">
                 Свежие партии прибывают ежемесячно
               </h4>
               <p className="text-gray-700">
@@ -93,7 +93,7 @@ const GeographySection = () => {
             </div>
             
             <Button 
-              className="cta-button"
+              className="bg-gold hover:bg-gold-dark text-white"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Запросить актуальный прайс

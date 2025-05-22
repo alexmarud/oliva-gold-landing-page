@@ -63,21 +63,21 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Enhanced olive oil color palette
+				// Enhanced olive oil color palette to match the logo
 				olive: {
-					light: '#8A9A3B',
-					DEFAULT: '#536212',
-					dark: '#3C4A0A'
+					light: '#637A39',
+					DEFAULT: '#2C4017',
+					dark: '#1A2F0A'
+				},
+				gold: {
+					light: '#F9D17F',
+					DEFAULT: '#E4AE3D',
+					dark: '#C79020'
 				},
 				sunny: {
 					light: '#F9D570',
 					DEFAULT: '#F1C40F',
 					dark: '#D4AC0D'
-				},
-				gold: {
-					light: '#E0C172',
-					DEFAULT: '#D4AF37',
-					dark: '#B08A1A'
 				}
 			},
 			borderRadius: {
@@ -118,8 +118,8 @@ export default {
 				'fade-in-left': 'fade-in-left 0.6s ease-out forwards'
 			},
 			backgroundImage: {
-				'olive-gradient': 'linear-gradient(to right, #8A9A3B, #536212)',
-				'gold-gradient': 'linear-gradient(to right, #F9D570, #D4AF37)'
+				'olive-gradient': 'linear-gradient(to right, #2C4017, #1A2F0A)',
+				'gold-gradient': 'linear-gradient(to right, #F9D17F, #C79020)'
 			}
 		}
 	},
