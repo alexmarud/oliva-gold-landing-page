@@ -11,27 +11,18 @@ const HeroSection = () => {
       id="top"
       className="relative min-h-screen flex items-center justify-center"
       style={{
-        backgroundImage: "linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), url('/lovable-uploads/8bb2b844-3965-4e01-af6f-a3327c183678.png')",
+        backgroundImage: "url('/lovable-uploads/8bb2b844-3965-4e01-af6f-a3327c183678.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
+        backgroundColor: "rgba(255, 255, 255, 0.85)",  // Light background color
+        backgroundBlendMode: "overlay",  // This blends the image with the light background
       }}
     >
-      <div 
-        className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/20"
-      ></div>
-
       <div className="container mx-auto relative z-10 text-center">
         <div className="flex justify-center mb-8">
-          <div className="bg-olive-dark/90 rounded-lg p-6 inline-block shadow-2xl">
-            <div className="text-gold text-4xl font-bold flex items-center">
-              <span className="mr-2">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20 5C22.5 10 30 12 35 12C35 25 27.5 35 20 35C12.5 35 5 25 5 12C10 12 17.5 10 20 5Z" fill="#F5CB57"/>
-                  <path d="M20 10C21 13 25 14 28 14C28 22 24 28 20 28C16 28 12 22 12 14C15 14 19 13 20 10Z" fill="#2C4017" fillOpacity="0.3"/>
-                  <circle cx="20" cy="18" r="3" fill="#F5CB57"/>
-                </svg>
-              </span>
+          <div className="bg-white/80 rounded-lg p-6 inline-block shadow-md">
+            <div className="text-gold text-4xl font-bold">
               Oliva<span className="text-gold font-extrabold">Gold</span>
             </div>
           </div>
