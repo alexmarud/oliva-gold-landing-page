@@ -45,7 +45,7 @@ const GeographySection = () => {
             <div 
               className="rounded-lg overflow-hidden shadow-lg h-96 bg-cover bg-center"
               style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1575503802870-45de6a6217c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')"
+                backgroundImage: "url('/lovable-uploads/7e16720c-6bc4-4393-b22b-6bd0fd06e166.png')"
               }}
             ></div>
           </div>

@@ -70,9 +70,9 @@ export default {
 					dark: '#1A2F0A'
 				},
 				gold: {
-					light: '#F9D17F',
-					DEFAULT: '#E4AE3D',
-					dark: '#C79020'
+					light: '#F9D580',
+					DEFAULT: '#F5CB57', // Updated to match logo gold
+					dark: '#D3AB37'
 				},
 				sunny: {
 					light: '#F9D570',
@@ -119,7 +119,7 @@ export default {
 			},
 			backgroundImage: {
 				'olive-gradient': 'linear-gradient(to right, #2C4017, #1A2F0A)',
-				'gold-gradient': 'linear-gradient(to right, #F9D17F, #C79020)'
+				'gold-gradient': 'linear-gradient(to right, #F9D580, #D3AB37)'
 			}
 		}
 	},

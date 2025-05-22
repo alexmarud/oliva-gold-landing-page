@@ -27,19 +27,34 @@ const ContactForm = () => {
     setLoading(true);
     
     try {
+      console.log("Submitting form data:", formData);
+      
       // Save to Supabase
-      const { error: supabaseError } = await supabase
+      const { error: supabaseError, data } = await supabase
         .from('contacts')
         .insert([formData]);
 
-      if (supabaseError) throw new Error(supabaseError.message);
+      if (supabaseError) {
+        console.error("Supabase error:", supabaseError);
+        throw new Error(supabaseError.message);
+      }
+      
+      console.log("Data saved to Supabase:", data);
 
       // Send email via edge function
-      const { error } = await supabase.functions.invoke('send-contact-email', {
-        body: JSON.stringify(formData),
-      });
+      try {
+        const { error } = await supabase.functions.invoke('send-contact-email', {
+          body: JSON.stringify(formData),
+        });
 
-      if (error) throw new Error(error.message);
+        if (error) {
+          console.error("Edge function error:", error);
+          // We'll continue even if email fails, as we've already saved to db
+        }
+      } catch (emailError) {
+        console.error("Email sending error:", emailError);
+        // Continue even if email fails
+      }
 
       toast({
         title: "Заявка отправлена!",

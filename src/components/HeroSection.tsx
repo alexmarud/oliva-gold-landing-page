@@ -9,12 +9,13 @@ const HeroSection = () => {
   return (
     <section
       id="top"
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-r from-olive/90 to-olive px-4"
+      className="relative min-h-screen flex items-center justify-center"
       style={{
-        backgroundImage: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')",
+        backgroundImage: "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed"
+        backgroundAttachment: "fixed",
+        backgroundColor: "#F5CB57", // Using the gold color from the logo
       }}
     >
       <div 
@@ -32,7 +33,7 @@ const HeroSection = () => {
         
         <div className="max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gold mb-6 drop-shadow-lg">
-            Оптовый импорт оливкового масла в куба-тейнерах 1000 л
+            Оптовые продажи оливкового масла
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8">
