@@ -11,14 +11,14 @@ const HeroSection = () => {
       id="top"
       className="relative min-h-screen flex items-center justify-center"
       style={{
-        backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/lovable-uploads/8bb2b844-3965-4e01-af6f-a3327c183678.png')",
+        backgroundImage: "linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), url('/lovable-uploads/8bb2b844-3965-4e01-af6f-a3327c183678.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
       }}
     >
       <div 
-        className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/40"
+        className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/20"
       ></div>
 
       <div className="container mx-auto relative z-10 text-center">
@@ -42,7 +42,7 @@ const HeroSection = () => {
             Оптовые продажи оливкового масла
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-8">
+          <p className="text-xl md:text-2xl text-olive-dark mb-8 font-medium drop-shadow-md">
             Прямой контракт с Андалусией с 2004 года
           </p>
           
@@ -68,7 +68,7 @@ const HeroSection = () => {
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="#2C4017" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       </div>
     </section>
