@@ -8,8 +8,15 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
 const App = () => {
-  // Create a client inside the component function
-  const queryClient = new QueryClient();
+  // Create a client inside the component function to fix the React hooks error
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        staleTime: 1000 * 60 * 5, // 5 minutes
+        refetchOnWindowFocus: false,
+      },
+    },
+  });
   
   return (
     <QueryClientProvider client={queryClient}>

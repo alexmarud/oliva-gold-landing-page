@@ -34,11 +34,17 @@ const NavBar = () => {
     >
       <div className="container mx-auto flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2">
-          <img 
-            src="/lovable-uploads/93cb3a15-7f26-44af-b975-ecc3ec3b81c7.png" 
-            alt="Олива Голд" 
-            className="h-14 w-auto" 
-          />
+          <div className="bg-olive-dark/90 rounded-lg p-2 shadow-lg flex items-center">
+            <svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 5C22.5 10 30 12 35 12C35 25 27.5 35 20 35C12.5 35 5 25 5 12C10 12 17.5 10 20 5Z" fill="#F5CB57"/>
+              <path d="M20 10C21 13 25 14 28 14C28 22 24 28 20 28C16 28 12 22 12 14C15 14 19 13 20 10Z" fill="#2C4017" fillOpacity="0.3"/>
+              <circle cx="20" cy="18" r="3" fill="#F5CB57"/>
+            </svg>
+            <span className={cn(
+              "ml-2 text-xl font-bold",
+              scrolled ? "text-olive-dark" : "text-white"
+            )}>Oliva<span className="text-gold font-extrabold">Gold</span></span>
+          </div>
         </a>
 
         {/* Desktop Menu */}
