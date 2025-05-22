@@ -35,7 +35,7 @@ const ContactSection = () => {
   }, []);
 
   return (
-    <section id="contact" className="section-padding" ref={sectionRef}>
+    <section id="contact" className="section-padding bg-gradient-to-b from-amber-50 to-olive-light/10" ref={sectionRef}>
       <div className="container mx-auto">
         <h2 className="section-heading text-center animate-on-scroll">
           Свяжитесь с нами

@@ -34,7 +34,7 @@ const GeographySection = () => {
   }, []);
 
   return (
-    <section id="geography" className="section-padding bg-gray-50" ref={sectionRef}>
+    <section id="geography" className="section-padding bg-gradient-to-b from-amber-50 to-olive-light/10" ref={sectionRef}>
       <div className="container mx-auto">
         <h2 className="section-heading text-center animate-on-scroll">
           География и наличие
@@ -45,7 +45,7 @@ const GeographySection = () => {
             <div 
               className="rounded-lg overflow-hidden shadow-lg h-96 bg-cover bg-center"
               style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')"
+                backgroundImage: "url('https://images.unsplash.com/photo-1569445748557-316b8c8af9f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')"
               }}
             ></div>
           </div>
@@ -82,7 +82,7 @@ const GeographySection = () => {
               </li>
             </ul>
             
-            <div className="bg-olive/10 rounded-lg p-6 mb-8">
+            <div className="bg-sunny/10 rounded-lg p-6 mb-8">
               <h4 className="text-xl font-medium text-olive mb-2">
                 Свежие партии прибывают ежемесячно
               </h4>

@@ -63,16 +63,21 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for Oliva Gold
+				// Enhanced olive oil color palette
 				olive: {
 					light: '#8A9A3B',
-					DEFAULT: '#5D6E1E',
-					dark: '#4A591A'
+					DEFAULT: '#536212',
+					dark: '#3C4A0A'
 				},
 				sunny: {
-					light: '#F7DC6F',
+					light: '#F9D570',
 					DEFAULT: '#F1C40F',
 					dark: '#D4AC0D'
+				},
+				gold: {
+					light: '#E0C172',
+					DEFAULT: '#D4AF37',
+					dark: '#B08A1A'
 				}
 			},
 			borderRadius: {
@@ -111,6 +116,10 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out forwards',
 				'fade-in-left': 'fade-in-left 0.6s ease-out forwards'
+			},
+			backgroundImage: {
+				'olive-gradient': 'linear-gradient(to right, #8A9A3B, #536212)',
+				'gold-gradient': 'linear-gradient(to right, #F9D570, #D4AF37)'
 			}
 		}
 	},

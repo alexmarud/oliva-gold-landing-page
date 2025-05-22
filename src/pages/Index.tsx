@@ -8,7 +8,6 @@ import GeographySection from "../components/GeographySection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
-import StickyButton from "../components/StickyButton";
 
 const Index = () => {
   useEffect(() => {
@@ -51,7 +50,7 @@ const Index = () => {
       <GeographySection />
       <ContactSection />
       <Footer />
-      <StickyButton />
+      {/* StickyButton removed as requested */}
     </main>
   );
 };

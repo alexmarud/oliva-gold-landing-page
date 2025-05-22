@@ -35,16 +35,10 @@ const NavBar = () => {
       <div className="container mx-auto flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2">
           <img 
-            src="/placeholder.svg" 
+            src="/lovable-uploads/3979f86a-0126-47c2-845f-b3e688eb58bb.png" 
             alt="Олива Голд" 
-            className="h-10 w-auto" 
+            className="h-14 w-auto" 
           />
-          <span className={cn(
-            "font-bold text-xl transition-colors duration-300",
-            scrolled ? "text-olive" : "text-white"
-          )}>
-            Олива Голд
-          </span>
         </a>
 
         {/* Desktop Menu */}

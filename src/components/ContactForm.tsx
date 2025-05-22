@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -26,37 +27,33 @@ const ContactForm = () => {
     setLoading(true);
     
     try {
-      // Using FormSubmit.co as a simple email sending service
-      const response = await fetch("https://formsubmit.co/importamare@gmail.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          ...formData,
-          _subject: `Заявка с сайта Олива Голд от ${formData.company}`,
-          _template: "table",
-        }),
+      // Save to Supabase
+      const { error: supabaseError } = await supabase
+        .from('contacts')
+        .insert([formData]);
+
+      if (supabaseError) throw new Error(supabaseError.message);
+
+      // Send email via edge function
+      const { error } = await supabase.functions.invoke('send-contact-email', {
+        body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
-        toast({
-          title: "Заявка отправлена!",
-          description: "Мы свяжемся с вами в ближайшее время.",
-          duration: 5000,
-        });
-        
-        setFormData({
-          name: "",
-          company: "",
-          phone: "",
-          email: "",
-          message: ""
-        });
-      } else {
-        throw new Error("Ошибка отправки формы");
-      }
+      if (error) throw new Error(error.message);
+
+      toast({
+        title: "Заявка отправлена!",
+        description: "Мы свяжемся с вами в ближайшее время.",
+        duration: 5000,
+      });
+      
+      setFormData({
+        name: "",
+        company: "",
+        phone: "",
+        email: "",
+        message: ""
+      });
     } catch (error) {
       console.error("Ошибка отправки формы:", error);
       toast({
