@@ -28,6 +28,10 @@ const HeroSection = () => {
             Прямой контракт с Андалусией с 2004 года
           </p>
           
+          <p className="text-lg text-olive-dark mb-8 font-medium drop-shadow-md">
+            Производитель: ACEITES SIERRA SUR S.A.
+          </p>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               onClick={scrollToContact}
