@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import ContactForm from "./ContactForm";
 import { Mail, Phone, MapPin } from "lucide-react";
@@ -55,8 +54,8 @@ const ContactSection = () => {
                   <Mail className="h-5 w-5 text-sunny mr-3 mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-medium">E-mail:</p>
-                    <a href="mailto:sales@olivagold.ru" className="text-olive hover:text-sunny">
-                      sales@olivagold.ru
+                    <a href="mailto:sale@olivagold.ru" className="text-olive hover:text-sunny">
+                      sale@olivagold.ru
                     </a>
                   </div>
                 </div>
@@ -65,8 +64,8 @@ const ContactSection = () => {
                   <Phone className="h-5 w-5 text-sunny mr-3 mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-medium">Телефон:</p>
-                    <a href="tel:+74950000000" className="text-olive hover:text-sunny">
-                      +7 (495) XXX-XX-XX
+                    <a href="tel:+79167021579" className="text-olive hover:text-sunny">
+                      +7 (916) 702-15-79
                     </a>
                   </div>
                 </div>

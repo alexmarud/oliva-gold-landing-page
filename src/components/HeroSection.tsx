@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -9,15 +8,7 @@ const HeroSection = () => {
   return (
     <section
       id="top"
-      className="relative min-h-screen flex items-center justify-center"
-      style={{
-        backgroundImage: "url('/lovable-uploads/8bb2b844-3965-4e01-af6f-a3327c183678.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
-        backgroundColor: "rgba(255, 255, 255, 0.85)",  // Light background color
-        backgroundBlendMode: "overlay",  // This blends the image with the light background
-      }}
+      className="relative min-h-screen flex items-center justify-center bg-amber-50 text-olive-dark"
     >
       <div className="container mx-auto relative z-10 text-center">
         <div className="flex justify-center mb-8">
